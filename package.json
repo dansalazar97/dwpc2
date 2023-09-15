@@ -16,5 +16,13 @@
     "hbs": "^4.2.0",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.19",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.22.15",
+    "babel-watch": "^7.8.1",
+    "core-js": "^3.32.2"
   }
 }
