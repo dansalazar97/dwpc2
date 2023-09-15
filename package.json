@@ -1,10 +1,10 @@
 {
   "name": "dwpc2",
   "version": "1.0.0",
-  "description": "On this repo we make a server with vist controller model using stack MEN",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server/bin/www",
+    "dev": "DEBUG=dwpc2:server node --watch ./server/bin/www"
   },
   "keywords": [],
   "author": "",
