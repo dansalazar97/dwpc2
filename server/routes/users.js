@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
 
 // GET /users/author
 router.get('/author', function(_, res) {
-  res.render('author', {author: 'Daniel Salazar'})
+  res.render('author', {author: 'Daniel Salazar',
+style: './stylesheets/style.css'})
 });
 
 module.exports = router;
-
