@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./server/bin/www",
-    "dev": "DEBUG=dwpc2:server node --watch ./server/bin/www"
+    "start": "PORT=3000 APP_URL='http://localhost' DEBUG=dwpc2 node ./dist/bin/www",
+    "dev": "NODE_ENV=development PORT=3000 APP_URL='http://localhost' DEBUG=dwpc2 babel-watch --watch ./server/views ./server/bin/www",
+    "devc": "NODE_ENV=development webpack serve --config ./webpack.config.js --mode development",
+    "build": "npm run clean && babel ./server --out-dir dist --copy-files",
+    "clean": "rm -rf ./dist"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +18,9 @@
     "express": "^4.18.2",
     "hbs": "^4.2.0",
     "http-errors": "^2.0.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "webpack-dev-middleware": "^6.1.1",
+    "webpack-hot-middleware": "^2.25.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
@@ -23,6 +28,9 @@
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.22.15",
     "babel-watch": "^7.8.1",
-    "core-js": "^3.32.2"
+    "core-js": "^3.32.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
