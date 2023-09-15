@@ -9,6 +9,7 @@
     "build": "npm run clean && babel ./server --out-dir dist --copy-files",
     "clean": "rm -rf ./dist"  
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
